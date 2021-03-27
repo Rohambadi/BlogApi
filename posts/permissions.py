@@ -1,4 +1,4 @@
-from rest_framework import  permissions
+from rest_framework import permissions
 
 SAFE_METHODS = ('GET', 'HEAD', 'OPTIONS')
 class IsAuthorOrReadOnly(permissions.BasePermission):
@@ -18,6 +18,7 @@ class IsAdmin(permissions.BasePermission):
             request.user and
             request.user.is_staff
         )
+
 
 
 
